@@ -3,8 +3,14 @@
   
   /* @ngInject */
   angular
-    .module('app', ['ngRoute', 'ngMaterial', 'app.controllers', 'app.services'])
-    .config(config);
+    .module('app', ['ngRoute', 'ngMaterial', 'app.controllers', 'app.services','uiGmapgoogle-maps'])
+    .config(config).config(
+    ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
+        GoogleMapApiProviders.configure({
+            china: true
+        });
+    }]
+);
 
   /* @ngInject */
   function config ($locationProvider, $routeProvider) {
