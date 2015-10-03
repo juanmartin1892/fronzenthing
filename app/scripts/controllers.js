@@ -9,9 +9,24 @@
     .controller('PostDetailCtrl', PostDetailCtrl);
 
   /* @ngInject */
-  function Map () {
+  function Map ($http) {
     this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+
+    window.getStatus = function () {
+      $http({
+        method: 'GET',
+        dataType: 'json',
+        url: 'http://178.62.118.55:5000/',
+      }).then(function successCallback(response) {
+          console.log("success");
+
+        }, function errorCallback(response) {
+          console.log("error");
+
+        });
+    }
   }
+
 
   /* @ngInject */
   function PostListCtrl (Post) {
