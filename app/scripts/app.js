@@ -12,9 +12,9 @@
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/post-list.tpl.html',
-        controller: 'PostListCtrl',
-        controllerAs: 'postlist'
+        templateUrl: 'views/map.tpl.html',
+        controller: 'Map',
+        controllerAs: 'map'
       })
       .when('/:postId', {
         templateUrl: 'views/post-detail.tpl.html',
