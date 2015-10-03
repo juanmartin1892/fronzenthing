@@ -4,12 +4,13 @@
   /* @ngInject */
   angular
     .module('app.services', ['ngResource'])
-    .constant('BaseUrl', 'http://jsonplaceholder.typicode.com')
+    .constant('BaseUrl', 'http://localhost:8080/')
     .factory('Post', Post)
     .factory('Comment', Comment)
     .factory('User', User);
 
   /* @ngInject */
+
   function Post ($resource, BaseUrl) {
     return $resource(BaseUrl + '/posts/:postId',
       { postId: '@_id' }

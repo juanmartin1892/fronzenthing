@@ -30,20 +30,20 @@
         Para mejorar la experiencia..
       </p>
     <![endif]-->
+
+    <md-toolbar layout="row">
+      <div class="md-toolbar-tools">
+        <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
+          <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
+        </md-button>
+        <h1>Hello World</h1>
+      </div>
+    </md-toolbar>
+    <div layout="column" flex id="content">
+        <md-content layout="column" flex class="md-padding" ng-view>
         
-        <md-toolbar layout="row">
-          <div class="md-toolbar-tools">
-            <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
-              <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
-            </md-button>
-            <h1>Hello World</h1>
-          </div>
-        </md-toolbar>
-        <div layout="column" flex id="content">
-            <md-content layout="column" flex class="md-padding" ng-view>
-            
-            </md-content>
-        </div>
+        </md-content>
+    </div>
 
     <!-- Google Analytics: Cambia UA-XXXXX-X por el ID de tu sitio -->
     <script>
