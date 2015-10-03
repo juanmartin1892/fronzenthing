@@ -1,9 +1,9 @@
 (function () {
   'use strict';
-
+  
   /* @ngInject */
   angular
-    .module('app', ['ngRoute', 'app.controllers', 'app.services'])
+    .module('app', ['ngRoute', 'ngMaterial', 'app.controllers', 'app.services'])
     .config(config);
 
   /* @ngInject */

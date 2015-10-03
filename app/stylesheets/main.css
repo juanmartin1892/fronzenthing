@@ -42,3 +42,8 @@ body {
 .comments .comments-list .comment-item .comment-body {
   font-style: italic;
 }
+.md-toolbar-tools h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: inherit;
+}
