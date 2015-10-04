@@ -10,14 +10,7 @@
   font-weight: 400;
   src: local('Raleway'), url("//themes.googleusercontent.com/static/fonts/raleway/v7/cIFypx4yrWPDz3zOxk7hIQLUuEpTyoUstqEm5AMlJo4.woff") format('woff');
 }
-html,
-body,
-#content,
-md-content,
-#map {
-  width: 100%;
-  height: 100%;
-}
+
 body {
   font-family: 'Raleway-Light';
   font-size: 16px;
