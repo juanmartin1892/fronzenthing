@@ -75,7 +75,7 @@
           options: {icon:'../pics/punto-mapa_NARANJA.png'},
         windowOptions: {visible: false},
             datas:{
-                tag: 'Córdoba',
+                tag: 'Málaga',
                 temperatureMin: -10,
                 temperatureMax: 10,
                 humedityMin: 40,
@@ -97,7 +97,7 @@
             options: {icon:'../pics/punto-mapa_VERDE.png'},
             windowOptions: {visible: false},
             datas:{
-                tag: 'Málaga',
+                tag: 'Córdoba',
                 temperatureMin: -10,
                 temperatureMax: 10,
                 humedityMin: 40,
