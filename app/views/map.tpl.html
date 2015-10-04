@@ -6,17 +6,9 @@
                     <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id" click="map.onClick(marker)" events="marker.events">
                         <ui-gmap-window options="marker.windowOptions" closeClick="map.closeClick(marker)">
                             <div>
-                                <p>{{marker.datas.tag}}</p>
-                                <p>{{marker.datas.temperatureMin}}</p>
-                                <p>{{marker.datas.temperatureMax}}</p>
-                                <p>{{marker.datas.humedityMin}}</p>
-                                <p>{{marker.datas.humedityMax}}</p>
-                                <p>{{marker.datas.temperature}}</p>
-                                <p>{{marker.datas.humedity}}</p>
-                                <p>{{marker.datas.temperatureAsc}}</p>
-                                <p>{{marker.datas.humedityAsc}}</p>
-                                <p>{{marker.datas.latitude}}</p>
-                                <p>{{marker.datas.longitude}}</p>
+                                <h5>Nombre: {{marker.datas.tag}}</h5>
+                                <p>Temperatura: {{marker.datas.temperature}} ºC</p>
+                                <p>Humedad: {{marker.datas.humedity}} %</p>
                             </div>
                         </ui-gmap-window>
                     </ui-gmap-marker>

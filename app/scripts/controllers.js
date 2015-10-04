@@ -89,20 +89,48 @@
             }
         },
         {
-          id: 2,
-          coords: {
-            latitude: 37.5,
-            longitude: -4
-          },
-          options: {icon:'../pics/punto-mapa_ROJO.png'},
+            id: 2,
+            coords: {
+                latitude: 37.5,
+                longitude: -4.5
+            },
+            options: {icon:'../pics/punto-mapa_ROJO.png'},
+            windowOptions: {visible: false},
+            datas:{
+                tag: 'Comion123',
+                temperatureMin: -10,
+                temperatureMax: 10,
+                humedityMin: 40,
+                humedityMax: 50,
+                temperature: 45,
+                humedity: 48,
+                temperatureAsc: 0,
+                humedityAsc: 1,
+                latitude: 37.6,
+                longitude: 4.3
+            }
         },
         {
           id: 2,
           coords: {
-            latitude: 37.2,
+            latitude: 36.7,
             longitude: -4.3
           },
           options: {icon:'../pics/punto-mapa_NARANJA.png'},
+        windowOptions: {visible: false},
+            datas:{
+                tag: 'Comion123',
+                temperatureMin: -10,
+                temperatureMax: 10,
+                humedityMin: 40,
+                humedityMax: 50,
+                temperature: 45,
+                humedity: 48,
+                temperatureAsc: 0,
+                humedityAsc: 1,
+                latitude: 37.16,
+                longitude: -3.6
+            }
         }
     ]
   }
