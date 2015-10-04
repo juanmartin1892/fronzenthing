@@ -1,14 +1,32 @@
-<md-card>
-    <md-card-content id="map_canvas" >
-        <ui-gmap-google-map center='map.map.center' zoom='map.map.zoom'>
-            <ui-gmap-marker coords="map.marker.coords" options="map.marker.options" idkey="map.marker.id">
-            </ui-gmap-marker>
-        </ui-gmap-google-map>
-    </md-card-content>
-</md-card>
-
-<div layout="row" layout-align="end end" ng-click="map.showAdvanced($event)">
-    <md-button class="md-fab" aria-label="Eat cake" >
+<md-content id="content" layout="column" flex class="md-padding">        
+    <md-card>
+        <md-card-content id="map_canvas" >
+            <ui-gmap-google-map center='map.map.center' zoom='map.map.zoom'>
+                <div ng-repeat="marker in map.markers">
+                    <ui-gmap-marker coords="marker.coords" options="marker.options" idkey="marker.id" click="map.onClick(marker)" events="marker.events">
+                        <ui-gmap-window options="marker.windowOptions" closeClick="map.closeClick(marker)">
+                            <div>
+                                <p>{{marker.datas.tag}}</p>
+                                <p>{{marker.datas.temperatureMin}}</p>
+                                <p>{{marker.datas.temperatureMax}}</p>
+                                <p>{{marker.datas.humedityMin}}</p>
+                                <p>{{marker.datas.humedityMax}}</p>
+                                <p>{{marker.datas.temperature}}</p>
+                                <p>{{marker.datas.humedity}}</p>
+                                <p>{{marker.datas.temperatureAsc}}</p>
+                                <p>{{marker.datas.humedityAsc}}</p>
+                                <p>{{marker.datas.latitude}}</p>
+                                <p>{{marker.datas.longitude}}</p>
+                            </div>
+                        </ui-gmap-window>
+                    </ui-gmap-marker>
+                </div>
+            </ui-gmap-google-map>
+        </md-card-content>
+    </md-card>
+</md-content>
+<div layout="row" layout-align="end end">
+    <md-button class="md-fab" aria-label="Eat cake"  ng-click="map.showAdvanced($event)">
         <md-icon class="fa fa-plus"></md-icon>
     </md-button>
 </div>

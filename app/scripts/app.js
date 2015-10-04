@@ -3,7 +3,7 @@
   
   /* @ngInject */
   angular
-    .module('app', ['ngRoute', 'ngMaterial', 'app.controllers', 'app.services','uiGmapgoogle-maps'])
+    .module('app', ['ngRoute', 'ngMaterial', 'LocalStorageModule', 'app.controllers', 'app.services','uiGmapgoogle-maps', 'uiGmapgoogle-maps'])
     .config(config).config(
     ['uiGmapGoogleMapApiProvider', function(GoogleMapApiProviders) {
         GoogleMapApiProviders.configure({

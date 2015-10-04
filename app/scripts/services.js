@@ -10,7 +10,6 @@
     .factory('User', User);
 
   /* @ngInject */
-
   function Post ($resource, BaseUrl) {
     return $resource(BaseUrl + '/posts/:postId',
       { postId: '@_id' }

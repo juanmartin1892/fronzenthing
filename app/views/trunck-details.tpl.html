@@ -1,5 +1,8 @@
  <md-conten layout-padding layout="row" layout-sm="column">
-    
+    <md-input-container>
+        <label>Nombre</label>
+        <input ng-model="trunck.tag">
+    </md-input-container>
     <md-input-container>
         <label>Identificador</label>
         <input ng-model="trunck.id">
@@ -8,21 +11,22 @@
 <md-conten layout-padding layout="row" layout-sm="column"> 
     <md-input-container>
         <label>Temperatura Maxima</label>
-        <input ng-model="trunck.maxTemp">
+        <input ng-model="trunck.temperatureMax">
     </md-input-container>
     <md-input-container>
         <label>Temperatura Minima</label>
-        <input ng-model="trunck.minTemp">
+        <input ng-model="trunck.temperatureMin">
     </md-input-container>
 </md-conten>
 <md-conten layout-padding layout="row" layout-sm="column"> 
     <md-input-container>
         <label>Humedad Maxima</label>
-        <input ng-model="trunck.maxHum">
+        <input ng-model="trunck.humedityMax">
     </md-input-container>
     <md-input-container>
         <label>Humedad Minima</label>
-        <input ng-model="trunck.minHum">
+        <input ng-model="trunck.humedityMin">
     </md-input-container>
 </md-conten>
+{{trunck}}
 <md-button class="md-raised md-primary" ng-click = "show">Guardar</md-button>
