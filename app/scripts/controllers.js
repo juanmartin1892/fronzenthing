@@ -6,12 +6,37 @@
     .module('app.controllers', ['app.services'])
     .controller('Map', Map)
     .controller('PostListCtrl', PostListCtrl)
-    .controller('PostDetailCtrl', PostDetailCtrl);
+    .controller('PostDetailCtrl', PostDetailCtrl)
+    .controller('trunckdetailsCtrl', trunckdetailsCtrl);
 
   /* @ngInject */
-  function Map () {
+  function Map ($mdDialog) {
     this.map = { center: { latitude: 45, longitude: -73 }, zoom: 8 };
+    this.marker = {
+      id: 0,
+      coords: {
+        latitude: 45,
+        longitude: -73
+      },
+      options: {},
+    };
+      
+    this.showAdvanced = function(ev) {
+        $mdDialog.show({
+            controller:trunckdetailsCtrl,
+            templateUrl: '../views/trunck-details.tpl.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose:true
+        })
+    };
   }
+    
+    function trunckdetailsCtrl($scope){
+        $scope.show = function(){
+            console.log(this.trunck)
+        }
+    }
 
   /* @ngInject */
   function PostListCtrl (Post) {
